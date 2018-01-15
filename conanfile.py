@@ -88,6 +88,9 @@ class ZMQConan(ConanFile):
             args = ['--prefix=%s' % self.package_folder,
                     '--with-pic',
                     '--without-docs']
+            if self.settings.compiler == "gcc":
+                # XXX there are some unused-variable warnings that would break gcc builds
+                args.extend(['-Wno-error',])
             if self.options.shared:
                 args.extend(['--disable-static', '--enable-shared'])
             else:
