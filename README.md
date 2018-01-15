@@ -1,4 +1,4 @@
-[Conan.io](https://conan.io) package for [somelib](https://github.com/zeromq/libzmq) project
+[Conan.io](https://conan.io) package for [zmq](https://github.com/zeromq/libzmq) project
 
 ## For Users: Use this package
 
