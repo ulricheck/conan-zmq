@@ -27,14 +27,6 @@ class ZMQConan(ConanFile):
 
     def source(self):
         self.run("git clone --branch v%s https://github.com/zeromq/libzmq.git sources" % self.version)
-        # extracted_dir = "zeromq-%s" % self.version
-        # if self.settings.os == "Windows":
-        #     archive_name = "%s.zip" % extracted_dir
-        # else:
-        #     archive_name = "%s.tar.gz" % extracted_dir
-        # source_url = "https://github.com/zeromq/libzmq/releases/download/v%s/%s" % (self.version, archive_name)
-        # tools.get(source_url)
-        # os.rename(extracted_dir, "sources")
 
     def build(self):
         cmake = CMake(self)
