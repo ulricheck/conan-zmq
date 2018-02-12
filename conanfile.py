@@ -48,11 +48,10 @@ class ZMQConan(ConanFile):
             self.copy(pattern="LICENSE")
 
     def package_info(self):
+        self.cpp_info.libs = tools.collect_libs(self)
         if self.settings.compiler == 'Visual Studio':
-            self.cpp_info.libs = ['libzmq', 'ws2_32', 'Iphlpapi']
+            self.cpp_info.libs.extend(['ws2_32', 'Iphlpapi'])
             if not self.options.shared:
                 self.cpp_info.defines.append('ZMQ_STATIC')
-        else:
-            self.cpp_info.libs = ['zmq']
-        if self.settings.os == "Linux":
+        elif self.settings.os == "Linux":
             self.cpp_info.libs.append('pthread')
