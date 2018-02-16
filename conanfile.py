@@ -31,6 +31,7 @@ class ZMQConan(ConanFile):
     def build(self):
         cmake = CMake(self)
         cmake.definitions["BUILD_SHARED_LIBS"] = self.options.shared
+        cmake.definitions["BUILD_TESTS"] = False
         cmake.configure(source_dir="sources")
         cmake.build()
         cmake.install()
