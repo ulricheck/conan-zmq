@@ -32,7 +32,7 @@ class ZMQConan(ConanFile):
         cmake = CMake(self)
         cmake.definitions["BUILD_SHARED"] = self.options.shared
         cmake.definitions["BUILD_STATIC"] = not self.options.shared
-        cmake.definitions["BUILD_TESTS"] = False
+        cmake.definitions["ZMQ_BUILD_TESTS"] = False
         cmake.configure(source_dir="sources")
         cmake.build()
         cmake.install()
