@@ -1,5 +1,9 @@
 [Conan.io](https://conan.io) package for [zmq](https://github.com/zeromq/libzmq) project
 
+## Add Remote
+
+    $ conan remote add camposs "https://conan.campar.in.tum.de/api/conan/conan-camposs"
+
 ## For Users: Use this package
 
 ### Basic setup
@@ -30,15 +34,11 @@ The example below shows the commands used to publish to bincrafters conan reposi
 
 The following command both runs all the steps of the conan file, and publishes the package to the local system cache.  This includes downloading dependencies from "build_requires" and "requires" , and then running the build() method.
 
-    $ conan create camposs/stable
-
-## Add Remote
-
-    $ conan remote add camp "https://conan.campar.in.tum.de"
+    $ conan create . camposs/stable
 
 ## Upload
 
-    $ conan upload zmq/4.2.3@camposs/stable --all -r camp
+    $ conan upload zmq/4.2.3@camposs/stable --all -r camposs
 
 ## License
 [LICENSE_TYPE](LICENSE)
