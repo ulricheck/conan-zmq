@@ -16,6 +16,9 @@ class ZMQConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
 
+    def configure(self):
+        del self.settings.compiler.libcxx
+
     def system_requirements(self):
         if self.settings.os == "Linux":
             if tools.os_info.linux_distro == "ubuntu" or tools.os_info.linux_distro == "debian":
