@@ -7,7 +7,7 @@ import os
 
 class ZMQConan(ConanFile):
     name = "zmq"
-    version = "4.2.3"
+    version = "4.2.5"
     url = "https://github.com/ulricheck/conan-zmq"
     description = "ZeroMQ is a community of projects focused on decentralized messaging and computing"
     license = "https://github.com/someauthor/somelib/blob/master/LICENSES"

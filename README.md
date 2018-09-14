@@ -8,14 +8,14 @@
 
 ### Basic setup
 
-    $ conan install zmq/4.2.3@camposs/stable
+    $ conan install zmq/4.2.5@camposs/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    zmq/4.2.3@camposs/stable
+    zmq/4.2.5@camposs/stable
 
     [generators]
     txt
@@ -38,7 +38,7 @@ The following command both runs all the steps of the conan file, and publishes t
 
 ## Upload
 
-    $ conan upload zmq/4.2.3@camposs/stable --all -r camposs
+    $ conan upload zmq/4.2.5@camposs/stable --all -r camposs
 
 ## License
 [LICENSE_TYPE](LICENSE)
