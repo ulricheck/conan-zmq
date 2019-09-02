@@ -1,6 +1,6 @@
 env:
    global:
-     - CONAN_REFERENCE: "zmq/4.2.3"
+     - CONAN_REFERENCE: "zmq/4.3.2"
      - CONAN_USERNAME: "camposs"
      - CONAN_LOGIN_USERNAME: "camposs"
      - CONAN_CHANNEL: "stable"
